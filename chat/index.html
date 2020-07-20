@@ -1,0 +1,20 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body lang=RU>
+<H1>Добро пожаловать в чат!</H1>
+<FORM>
+    <input id="firstspace" />
+    <input type="button" value="Отправить" onClick="copypast()" />
+    <br><input id="secondspace" /></br>
+    
+    <script>
+    function copypast(){
+      document.getElementById('secondspace').value=document.getElementById('firstspace').value;
+    }
+    </script>
+        
+</FORM>
+</body>
+</html>
