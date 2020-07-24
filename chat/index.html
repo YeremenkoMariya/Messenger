@@ -5,18 +5,15 @@
 </head>
 <body lang=RU>
     <h1>Добро пожаловать в чат!</h1>
-    <form>
-      <input id="firstspace">
-      <input type="button" value="Отправить" onclick="copypast()"><br>
-      <textarea id="secondspace" style="width: 300px; height: 250px"></textarea>
-    </form>
-    <script>
-        function copypast(){
-          const first = document.querySelector('#firstspace');
-          const second = document.querySelector('#secondspace');
-          second.textContent += `${first.value}\n`;
-          first.value = '';
-        }
-      </script>
+    <input type="text" id="txt1" placeholder="Введите текст...">
+  <button onclick="out()" >Отправить</button>
+<p id="txtprev1"></p>
+  
+  <script>
+ function out() {
+document.getElementById('txtprev1').innerHTML += '<br>' + document.getElementById("txt1").value;
+document.getElementById("txt1").value = '';
+};
+  </script>
 </body>
 </html>
