@@ -6,22 +6,71 @@
         p {
           background: #B5DDD4;
           width: 150px;
-          border: 1px solid rgba(19, 19, 122, 0.801);
+          padding: 10px;
+          border-radius: 10px; 
+          font-family: Arial, sans-serif;
+          font-stretch: normal;
+          font-size: 13px
+          
+          
+          
+        }
+
+        p.window{
+          background: #76c4b2;
+          width: 600px;
+          padding: 10px;
+          border-radius: 10px; 
+          height: 300px;
+          
+        
+          
+        }
+
+        h1{
+          font-family: Arial;
+          color: rgb(68, 68, 68);
+          background: #B5DDD4;
+          width: 600px;
           padding: 10px;
           border-radius: 10px; 
         }
-      </style>
+
+        input{
+          border-radius: 10px;
+          background: white;
+          outline: none;
+          height: 30px;
+          width: 587px;
+          border: 1px solid #919191;
+          font-family: Arial, sans-serif;
+         
+        }
+
+        button{
+          width: 0; 
+          height: 0;
+          outline: none; 
+          background: none;
+          border-width: 10px 0 10px 20px;
+          border-style: solid;
+          border-color: transparent #48ad96;
+        }
+       
+        
+      </style> 
   </head>
 
   <body lang=RU>
     <h1>Добро пожаловать в чат!</h1>
+    <p class="window" scrolling="auto" id="txtprev1" ></p>
     <input type="text" id="txt1" placeholder="Введите текст...">
-    <button onclick="out()" >Отправить</button>
-    <p id="txtprev1" ></p>
+    <button onclick="out()"></button>
+    
   
     <script>
       function out() {
-      document.getElementById('txtprev1').innerHTML += `<p>${document.getElementById("txt1").value}</p>`;
+      document.getElementById('txtprev1').innerHTML += `<p >${document.getElementById("txt1").value}</p>`;
       document.getElementById("txt1").value = '';
       };
     </script>
