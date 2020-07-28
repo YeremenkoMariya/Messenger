@@ -74,7 +74,7 @@
 
   <body lang=RU>
      <h1>&#8195&#8195&#8195Добро пожаловать в чат!</h1>
-    <p class="window" scrolling="auto" id="txtprev1" ></p>
+    <p class="window" id="txtprev1" ></p>
     <input type="text" id="txt1" placeholder="Введите текст...">
     <div id="btn"><button onclick="out()"></button></div>
     
@@ -85,9 +85,9 @@
       document.getElementById("txt1").value = '';
       };
 
-      setInterval(func, 3000);
+      setInterval(func, 5000);
       function func() {
-        document.getElementById('txtprev1').innerHTML= `<p >текст</p>`;
+        document.getElementById('txtprev1').innerHTML+= `<p>текст входящего сообщения</p>`;
         
       }
     </script>
