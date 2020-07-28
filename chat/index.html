@@ -12,10 +12,11 @@
           font-stretch: normal;
           font-size: 13px
           
-          
-          
+            
         }
 
+  
+    
         p.window{
           background: #76c4b2;
           width: 600px;
@@ -56,23 +57,39 @@
           border-style: solid;
           border-color: transparent #48ad96;
         }
+
+        #btn{position: absolute;}
+        #btn{
+          top: 435px;
+          right: 603px;
+        }
+
+       
+      
+
        
         
       </style> 
   </head>
 
   <body lang=RU>
-    <h1>Добро пожаловать в чат!</h1>
+     <h1>&#8195&#8195&#8195Добро пожаловать в чат!</h1>
     <p class="window" scrolling="auto" id="txtprev1" ></p>
     <input type="text" id="txt1" placeholder="Введите текст...">
-    <button onclick="out()"></button>
+    <div id="btn"><button onclick="out()"></button></div>
     
   
     <script>
       function out() {
-      document.getElementById('txtprev1').innerHTML += `<p >${document.getElementById("txt1").value}</p>`;
+      document.getElementById('txtprev1').innerHTML += `<p >${document.getElementById("txt1").value}</p>` ;
       document.getElementById("txt1").value = '';
       };
+
+      setInterval(func, 3000);
+      function func() {
+        document.getElementById('txtprev1').innerHTML= `<p >текст</p>`;
+        
+      }
     </script>
   </body>
 </html>
