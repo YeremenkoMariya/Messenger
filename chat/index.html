@@ -10,7 +10,10 @@
           border-radius: 10px; 
           font-family: Arial, sans-serif;
           font-stretch: normal;
-          font-size: 13px
+          font-size: 13px;
+          
+          
+          
           
             
         }
@@ -82,6 +85,7 @@
         -webkit-border-radius: 10px;
         border-radius: 10px;
         background-color:#64b19f;
+        
         }
 
         ::-webkit-scrollbar-thumb:hover{
@@ -99,8 +103,12 @@
         width: 10px;
         }
       
+        #block1{position:relative;}
+        #block1{
+          left: 400px;
 
-       
+        }
+        
         
       </style> 
   </head>
@@ -109,19 +117,21 @@
      <h1>&#8195&#8195&#8195Добро пожаловать в чат!</h1>
     <p class="window" id="txtprev1" ></p>
     <input type="text" id="txt1" placeholder="Введите текст...">
-    <div id="btn"><button onclick="out()"></button></div>
+    <div id="btn"><button ></button></div>
+    </div>
     
   
     <script>
-      function out() {
-      document.getElementById('txtprev1').innerHTML += `<p >${document.getElementById("txt1").value}</p>` ;
-      document.getElementById("txt1").value = '';
+      document.querySelector("button").onclick = btn_click;
+
+      function btn_click() {
+        document.getElementById('txtprev1').insertAdjacentHTML("beforeend", `<div id="block1"><p>${document.getElementById("txt1").value}</p></div>`)  ;
+        document.getElementById("txt1").value = '';
       };
 
       setInterval(func, 5000);
       function func() {
-        document.getElementById('txtprev1').innerHTML+= `<p>текст входящего сообщения</p>`;
-        
+       document.getElementById('txtprev1').insertAdjacentHTML("beforeend", `<p>текст входящего сообщения</p>`);
       }
     </script>
   </body>
